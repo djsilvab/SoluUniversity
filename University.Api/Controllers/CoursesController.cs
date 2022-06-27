@@ -13,8 +13,9 @@ using University.Logic.Repositories.Implements;
 using University.Logic.Services.Implements;
 
 namespace University.Api.Controllers
-{
+{    
     [RoutePrefix("api/courses")]
+    [Authorize]
     public class CoursesController : ApiController
     {
         private readonly CourseService courseService = new CourseService(new CourseRepository(UniversityContext.Create()));
