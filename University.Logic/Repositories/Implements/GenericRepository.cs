@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using University.Logic.Data;
+using System.Data.Entity.Migrations;
 
 namespace University.Logic.Repositories.Implements
 {
@@ -45,8 +46,8 @@ namespace University.Logic.Repositories.Implements
 
         public async Task<TEntity> Update(TEntity entity)
         {
-            universityContext.Entry(entity).State = EntityState.Modified;
-            //universityContext.Set<TEntity>().AddOrUpdate(entity);
+            //universityContext.Entry(entity).State = EntityState.Modified;
+            universityContext.Set<TEntity>().AddOrUpdate(entity);
             await universityContext.SaveChangesAsync();
             return entity;
         }

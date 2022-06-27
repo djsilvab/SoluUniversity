@@ -9,6 +9,6 @@ namespace University.Logic.Services
 {
     public interface ICourseService : IGenericService<Course>
     {
-
+        Task<bool> DeleteCheckOnEntity(int id);
     }
 }

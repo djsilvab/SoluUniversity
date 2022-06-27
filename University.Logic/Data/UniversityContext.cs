@@ -23,7 +23,7 @@ namespace University.Logic.Data
 
         public static UniversityContext Create()
         {
-            if (universityContext == null) 
+            if (universityContext == null)
                 universityContext = new UniversityContext();
 
             return universityContext;
