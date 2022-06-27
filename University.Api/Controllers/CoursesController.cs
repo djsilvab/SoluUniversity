@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 using University.Logic.Data;
 using University.Logic.Dtos;
 using University.Logic.Models;
@@ -22,8 +25,14 @@ namespace University.Api.Controllers
             this.mapper = WebApiApplication.MapperConfiguration.CreateMapper();
         }
 
+        /// <summary>
+        /// Obtiene una lista de cursos
+        /// </summary>
+        /// <returns>Listado de cursos</returns>
+        /// <response code="200">Ok. Devuelve el listado de objetos solicitados.</response>
         [HttpGet]
         [Route("GetAll")]
+        [ResponseType(typeof(IEnumerable<CourseDto>))]
         //[ActionName("getall")]
         public async Task<IHttpActionResult> GetAll()
         {
@@ -37,8 +46,16 @@ namespace University.Api.Controllers
             //NotFound
         }
 
+        /// <summary>
+        /// Obtiene un objeto Course por su Id
+        /// </summary>
+        /// <param name="id">Id del objeto</param>
+        /// <returns>Objeto Course</returns>
+        /// <response code="200">Ok. Devuelve el objeto solicitado.</response>
+        /// <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
         [HttpGet]
         [Route("GetById/{id}")]
+        [ResponseType(typeof(CourseDto))]
         public async Task<IHttpActionResult> GetById(int id)
         {
             var course = await courseService.GetById(id);
