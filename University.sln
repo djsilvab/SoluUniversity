@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University.Api", "Universit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University.Logic", "University.Logic\University.Logic.csproj", "{0295701E-11CA-409E-A7C1-3A3D131DEA2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University.Web", "University.Web\University.Web.csproj", "{C938E16D-C33D-4539-AD5D-4C8E09051B8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0295701E-11CA-409E-A7C1-3A3D131DEA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0295701E-11CA-409E-A7C1-3A3D131DEA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0295701E-11CA-409E-A7C1-3A3D131DEA2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C938E16D-C33D-4539-AD5D-4C8E09051B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C938E16D-C33D-4539-AD5D-4C8E09051B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C938E16D-C33D-4539-AD5D-4C8E09051B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C938E16D-C33D-4539-AD5D-4C8E09051B8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
