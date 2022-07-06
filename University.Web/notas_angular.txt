@@ -1,0 +1,8 @@
+9.1.3
+npm install -g @angular/cli
+npm install -g @angular/cli@9.1.3
+ng new clientapp
+
+ng g component component/course-list
+ng g class domain/Course
+ng g service service/Course

@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Edit Course</h2>
+
+  <div class="form-row" *ngIf="resultado.showMessage">
+    <div class="alert alert-{{resultado.type}} col-md-12" role="alert">
+      {{ resultado.message }}
+    </div>
+  </div>
+
+  <form #courseForm="ngForm" *ngIf="course">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>ID:</label>
+        <input type="text" id="courseID" name="courseID" placeholder="Enter the course ID" class="form-control" #courseID [(ngModel)]="course.CourseID" readonly />
+      </div>
+      <div class="col-md-4">
+        <label>Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter the title" class="form-control" #title [(ngModel)]="course.Title" />
+      </div>
+      <div class="col-md-4">
+        <label>Credits:</label>
+        <input type="text" id="credits" name="credits" placeholder="Enter the credits" class="form-control" #ccredits [(ngModel)]="course.Credits" />
+      </div>
+    </div>
+    <br />
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary btn-sm" (click)="edit()">Edit</button>
+      <a class="btn btn-outline-primary btn-sm" [routerLink]="['/course-list']">Back</a>
+    </div>
+      
+  </form>
+
+</div>
