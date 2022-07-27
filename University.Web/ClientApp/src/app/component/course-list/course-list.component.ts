@@ -26,6 +26,7 @@ export class CourseListComponent implements OnInit, OnDestroy {
   getAll() {
     this.subCourses = this.courseService.getAll().subscribe(data => {
       this.courses = data;
+      //console.log(data);
     });
   } 
 
